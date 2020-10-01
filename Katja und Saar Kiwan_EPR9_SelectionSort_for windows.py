@@ -21,11 +21,11 @@ class SelectionSortAlg:
         """ This Function takes a list of numbers and sorts them. 
         """
         for i in range(len(my_list)):
+            min = i
             for j in range(i+1, len(my_list)):
-                if my_list[i] > my_list[j]:
-                    my_list[i], my_list[j] = my_list[j], my_list[i]
-                #print(my_list)
-                #sleep(1)
+                if my_list[min] > my_list[j]:
+                    min = j
+            my_list[i],my_list[min] = my_list[min],my_list[i]
         return my_list
 
 
